@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#FFC400">
 <meta name="description" content="PYAY OWAY - ပြည်မြို့အတွက် အိုးဝေခေါ်ဆိုမှု ဝန်ဆောင်မှု">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&family=Noto+Sans+Myanmar:wght@400;500;600;700&display=swap" rel="stylesheet">
 <title>PYAY OWAY | ပြည်အိုးဝေ</title>
 <style>
 :root{
@@ -25,10 +28,15 @@ body{
   margin:0;
   color:var(--text);
   background:var(--paper);
-  font-family:"Noto Sans Myanmar","Pyidaungsu","Myanmar Text","Segoe UI",Arial,sans-serif;
-  line-height:1.65;
+  font-family:"Noto Sans Myanmar","Myanmar Text",sans-serif;
+  font-weight:400;
+  line-height:1.72;
+  text-rendering:optimizeLegibility;
 }
 a{color:inherit}
+.brand-copy, nav, .btn, .kicker, .stat strong, .feature h3, .driver-item strong, .legal-link, .num{
+  font-family:"Inter","Noto Sans Myanmar",sans-serif;
+}
 .container{width:min(1180px,calc(100% - 40px));margin:auto}
 header{
   position:sticky;top:0;z-index:40;
@@ -86,15 +94,16 @@ nav a{text-decoration:none;font-size:14px;font-weight:800;color:#343434}
   font-size:clamp(34px,4.2vw,52px);
   line-height:1.42;
   letter-spacing:0;
-  font-weight:900;
+  font-weight:700;
 }
 .hero-en{
   display:block;
-  margin-top:2px;
-  font-size:clamp(42px,5.8vw,68px);
+  margin-top:6px;
+  font-family:"Inter","Noto Sans Myanmar",sans-serif;
+  font-size:clamp(40px,5.3vw,64px);
   line-height:1.12;
-  letter-spacing:-1.2px;
-  font-weight:1000;
+  letter-spacing:-1.3px;
+  font-weight:800;
 }
 .hero h1 em{font-style:normal;position:relative;white-space:nowrap}
 .hero h1 em:after{
@@ -150,17 +159,18 @@ nav a{text-decoration:none;font-size:14px;font-weight:800;color:#343434}
 }
 .stat strong{display:block;font-size:18px;color:var(--ink);margin-bottom:5px}
 .stat span{font-size:14px;color:var(--muted)}
-section{padding:84px 0}
-.section-title{max-width:760px;margin:0 auto 42px;text-align:center}
+section{padding:78px 0}
+.section-title{max-width:720px;margin:0 auto 38px;text-align:center}
 .kicker{color:#A77E00;font-size:13px;font-weight:1000;letter-spacing:.07em;text-transform:uppercase}
 .section-title h2{
-  font-size:clamp(28px,3.4vw,42px);
-  line-height:1.48;
+  font-size:clamp(27px,3.1vw,38px);
+  line-height:1.58;
   color:var(--ink);
-  margin:9px 0 13px;
-  letter-spacing:0
+  margin:10px 0 12px;
+  letter-spacing:0;
+  font-weight:700
 }
-.section-title p{margin:0;color:var(--muted);font-size:16px}
+.section-title p{margin:0 auto;color:var(--muted);font-size:15px;line-height:1.85;max-width:660px}
 .feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .feature{
   background:#fff;border:1px solid var(--line);border-radius:24px;padding:27px;
@@ -178,10 +188,10 @@ section{padding:84px 0}
   border-top:1px solid #F0ECDF;
   border-bottom:1px solid #F0ECDF;
 }
-.app-layout{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.app-layout{display:grid;grid-template-columns:.95fr 1.05fr;gap:64px;align-items:center}
 .passenger-gallery{
   position:relative;
-  min-height:560px;
+  min-height:520px;
   border-radius:34px;
   background:linear-gradient(145deg,#FFF6CB,#FFE58A);
   border:1px solid #EED87C;
@@ -190,13 +200,13 @@ section{padding:84px 0}
   align-items:flex-end;
   justify-content:center;
   gap:22px;
-  padding:48px 34px 0;
+  padding:42px 30px 0;
 }
 .gallery-glow{
   position:absolute;
-  width:360px;height:360px;border-radius:50%;
+  width:335px;height:335px;border-radius:50%;
   background:rgba(255,196,0,.78);
-  top:62px;left:50%;transform:translateX(-50%);
+  top:58px;left:50%;transform:translateX(-50%);
 }
 .gallery-phone{
   position:relative;z-index:2;
@@ -207,17 +217,18 @@ section{padding:84px 0}
   box-shadow:0 24px 55px rgba(0,0,0,.19);
 }
 .gallery-phone img{display:block;width:100%;height:auto}
-.gallery-main{width:245px}
-.gallery-rating{width:205px;transform:translateY(28px)}
+.gallery-main{width:225px}
+.gallery-rating{width:185px;transform:translateY(24px)}
 .app-copy{padding:12px 0}
 .app-copy h2{
-  font-size:clamp(30px,3.5vw,43px);
-  line-height:1.45;
+  font-size:clamp(28px,3vw,38px);
+  line-height:1.58;
   color:var(--ink);
   margin:8px 0 16px;
-  letter-spacing:0
+  letter-spacing:0;
+  font-weight:700
 }
-.app-copy>p{color:var(--muted);font-size:16px;margin:0 0 28px}
+.app-copy>p{color:var(--muted);font-size:15px;line-height:1.85;margin:0 0 26px}
 .steps{display:grid;gap:14px}
 .step{
   display:grid;grid-template-columns:46px 1fr;gap:14px;align-items:start;
@@ -227,8 +238,8 @@ section{padding:84px 0}
   width:46px;height:46px;border-radius:14px;background:var(--yellow);
   display:grid;place-items:center;font-weight:1000;color:#111
 }
-.step h3{margin:1px 0 5px;font-size:16px;color:var(--ink)}
-.step p{margin:0;color:var(--muted);font-size:13px}
+.step h3{margin:1px 0 5px;font-size:15px;line-height:1.55;color:var(--ink);font-weight:700}
+.step p{margin:0;color:var(--muted);font-size:13px;line-height:1.7}
 .driver-wrap{
   border-radius:34px;background:#171717;color:#fff;
   padding:52px;overflow:hidden;position:relative;
@@ -240,8 +251,8 @@ section{padding:84px 0}
 }
 .driver-head{position:relative;z-index:2;max-width:680px}
 .driver-head .kicker{color:#FFD84D}
-.driver-head h2{font-size:clamp(30px,3.6vw,44px);line-height:1.48;margin:8px 0 12px}
-.driver-head p{color:#C9C9C9;margin:0}
+.driver-head h2{font-size:clamp(28px,3.2vw,39px);line-height:1.58;margin:8px 0 12px;font-weight:700}
+.driver-head p{color:#C9C9C9;margin:0;line-height:1.85;font-size:14px}
 .driver-features{
   position:relative;z-index:2;display:grid;grid-template-columns:repeat(2,1fr);
   gap:14px;margin-top:32px;max-width:800px
@@ -250,13 +261,13 @@ section{padding:84px 0}
   padding:18px;border-radius:18px;background:#252525;border:1px solid #383838
 }
 .driver-item strong{display:block;margin-bottom:5px;color:#fff}
-.driver-item span{font-size:13px;color:#BEBEBE}
+.driver-item span{font-size:13px;line-height:1.7;color:#BEBEBE}
 .trust-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:stretch}
 .trust-card{
   border-radius:28px;background:#fff;border:1px solid var(--line);padding:34px
 }
-.trust-card h3{font-size:27px;margin:0 0 10px;color:var(--ink)}
-.trust-card p{color:var(--muted);margin:0 0 22px}
+.trust-card h3{font-size:25px;line-height:1.55;margin:0 0 10px;color:var(--ink);font-weight:700}
+.trust-card p{color:var(--muted);line-height:1.85;margin:0 0 22px}
 .legal-links{display:grid;gap:12px}
 .legal-link{
   display:flex;justify-content:space-between;align-items:center;gap:18px;
@@ -272,13 +283,15 @@ section{padding:84px 0}
 .contact h2{font-size:clamp(28px,4vw,42px);margin:0 0 8px}
 .contact p{margin:0;color:#5C4A00}
 .contact .btn{background:#161616;color:#fff;white-space:nowrap}
-.faq-list{max-width:900px;margin:0 auto;display:grid;gap:12px}
-.faq-list details{background:#fff;border:1px solid var(--line);border-radius:18px;padding:0 20px}
-.faq-list summary{cursor:pointer;list-style:none;padding:20px 4px;font-weight:900;color:var(--ink);display:flex;justify-content:space-between;gap:16px}
+.faq-list{max-width:900px;margin:8px auto 0;display:grid;gap:14px}
+.faq-list details{background:#fff;border:1px solid var(--line);border-radius:18px;padding:0 22px;overflow:hidden}
+.faq-list summary{cursor:pointer;list-style:none;padding:20px 4px;font-weight:700;color:var(--ink);display:flex;align-items:center;justify-content:space-between;gap:18px;font-size:15px;line-height:1.65}
 .faq-list summary::-webkit-details-marker{display:none}
 .faq-list summary:after{content:"+";font-size:22px;color:#A77E00;line-height:1}
 .faq-list details[open] summary:after{content:"−"}
-.faq-list details p{margin:0;padding:0 4px 20px;color:var(--muted);font-size:14px}
+.faq-list details p{margin:0;padding:0 34px 21px 4px;color:var(--muted);font-size:14px;line-height:1.8}
+.faq-section{padding-top:72px;padding-bottom:86px}
+.faq-section .section-title{margin-bottom:30px}
 footer{border-top:1px solid var(--line);padding:34px 0 42px;color:var(--muted);font-size:13px}
 .footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 .footer strong{color:var(--ink)}
@@ -293,7 +306,7 @@ footer{border-top:1px solid var(--line);padding:34px 0 42px;color:var(--muted);f
   .hero-visual{min-height:515px}
   .stats-grid,.feature-grid{grid-template-columns:1fr}
   .app-layout{gap:36px}
-  .passenger-gallery{min-height:500px}
+  .passenger-gallery{min-height:475px}
   .driver-features{grid-template-columns:1fr}
   .contact{text-align:center;justify-content:center;flex-direction:column}
 }
@@ -302,8 +315,8 @@ footer{border-top:1px solid var(--line);padding:34px 0 42px;color:var(--muted);f
   .nav{height:68px}
   .brand-mark{width:40px;height:40px}
   .nav-cta{padding:9px 12px;font-size:13px}
-  .hero-mm{font-size:31px;line-height:1.48}
-  .hero-en{font-size:40px;line-height:1.18;letter-spacing:-.5px}
+  .hero-mm{font-size:29px;line-height:1.58}
+  .hero-en{font-size:38px;line-height:1.18;letter-spacing:-.5px}
   .hero-visual{min-height:460px}
   .hero-orb{width:330px;height:330px}
   .phone{width:245px}
@@ -312,11 +325,11 @@ footer{border-top:1px solid var(--line);padding:34px 0 42px;color:var(--muted);f
   .float-b{right:0;bottom:10%}
   section{padding:66px 0}
   .section-title{margin-bottom:28px}
-  .passenger-gallery{min-height:430px;padding:36px 16px 0;gap:12px}
-  .gallery-glow{width:280px;height:280px;top:55px}
-  .gallery-main{width:190px}
-  .gallery-rating{width:150px;transform:translateY(22px)}
-  .app-copy h2{font-size:29px;line-height:1.55}
+  .passenger-gallery{min-height:395px;padding:30px 14px 0;gap:10px}
+  .gallery-glow{width:250px;height:250px;top:50px}
+  .gallery-main{width:172px}
+  .gallery-rating{width:138px;transform:translateY(18px)}
+  .app-copy h2{font-size:27px;line-height:1.62}
   .driver-wrap{padding:30px 22px}
   .trust-card{padding:25px}
 }
@@ -443,14 +456,14 @@ footer{border-top:1px solid var(--line);padding:34px 0 42px;color:var(--muted);f
         <h3>PYAY OWAY — ပြည်အိုးဝေ</h3>
         <p>ပြည်မြို့အတွင်း Passenger နဲ့ Driver ကို နည်းပညာနဲ့ ချိတ်ဆက်ပြီး ခရီးသွားလာမှုကို ပိုမိုလွယ်ကူစေဖို့ ရည်ရွယ်ထားတဲ့ ဝန်ဆောင်မှုပါ။</p>
         <div class="feature-grid" style="grid-template-columns:1fr 1fr;margin-top:20px">
-          <div class="feature" style="padding:18px"><strong style="color:#161616">Local focus</strong><p>ပြည်မြို့အတွက်</p></div>
-          <div class="feature" style="padding:18px"><strong style="color:#161616">Simple flow</strong><p>အသုံးပြုရ လွယ်ကူ</p></div>
+          <div class="feature" style="padding:18px"><strong style="color:#161616">ပြည်မြို့အတွက်</strong><p>Local service</p></div>
+          <div class="feature" style="padding:18px"><strong style="color:#161616">အသုံးပြုရ လွယ်ကူ</strong><p>Simple flow</p></div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="faq" style="padding-top:30px">
+  <section id="faq" class="faq-section">
     <div class="container">
       <div class="section-title">
         <div class="kicker">FAQ</div>
