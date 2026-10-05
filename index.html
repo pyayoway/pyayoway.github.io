@@ -605,11 +605,14 @@ footer{border-top:1px solid var(--line);padding:30px 0 34px;color:var(--muted);f
     const status = document.getElementById('statsStatus');
 
     try {
-      const response = await fetch(PYAY_OWAY_STATS_URL, {
-        method: 'GET',
-        headers: { 'Accept': 'application/json' },
-        cache: 'no-store'
-      });
+      const response = await fetch(
+        PYAY_OWAY_STATS_URL + '?t=' + Date.now(),
+        {
+          method: 'GET',
+          mode: 'cors',
+          cache: 'no-store'
+        }
+      );
 
       if (!response.ok) throw new Error('HTTP ' + response.status);
 
@@ -627,6 +630,7 @@ footer{border-top:1px solid var(--line);padding:30px 0 34px;color:var(--muted);f
 
       if (status) status.textContent = 'Appwrite Live Data · ၅ မိနစ်တစ်ကြိမ် အလိုအလျောက် အပ်ဒိတ်';
     } catch (e) {
+      console.error('PYAY OWAY public stats error:', e);
       if (status) status.textContent = 'Live data ကို ခဏတာ မရနိုင်ပါ';
     }
   }
