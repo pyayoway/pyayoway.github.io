@@ -473,6 +473,64 @@ footer{border-top:1px solid var(--line);padding:30px 0 34px;color:var(--muted);f
 .footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 .footer strong{color:var(--ink)}
 .footer a{font-weight:800;text-decoration:none;color:#333}
+@media(min-width:901px){
+  /* Desktop production polish */
+  .container{width:min(1200px,calc(100% - 56px))}
+  .nav{height:78px}
+  nav{gap:26px}
+  nav a{transition:color .18s ease,transform .18s ease}
+  nav a:hover{color:#9A7400;transform:translateY(-1px)}
+
+  .hero{padding:78px 0 70px}
+  .hero-grid{
+    grid-template-columns:1.08fr .92fr;
+    gap:54px;
+    align-items:center;
+  }
+  .hero-copy{max-width:650px}
+  .hero h1{margin:18px 0 18px}
+  .hero-mm{font-size:clamp(38px,3.65vw,50px);line-height:1.42}
+  .hero-en{font-size:clamp(46px,4.75vw,62px)}
+  .lead{max-width:620px;font-size:17px;line-height:1.9;margin-bottom:28px}
+  .actions{gap:11px}
+  .btn,.store-soon{min-height:52px}
+  .hero-visual{min-height:630px}
+  .float-a{left:1%;top:15%}
+  .phone{transform:translateY(-2px) rotate(1deg)}
+
+  .stats{margin-top:-12px}
+  .stats-grid{gap:18px}
+  .stat{min-height:126px;padding:22px 24px;border-radius:23px}
+  .stat span{line-height:1.7}
+
+  section{padding:76px 0}
+  .section-title{margin-bottom:34px}
+  .section-title h2{margin-top:8px}
+
+  .public-stats{padding:68px 0 72px}
+  .public-stats-grid{gap:20px}
+  .public-stat-card{min-height:154px;padding:30px 22px;display:flex;flex-direction:column;justify-content:center}
+
+  .app-layout{grid-template-columns:1.03fr .97fr;gap:54px}
+  .passenger-gallery{min-height:490px;padding:42px 32px 0}
+  .gallery-main{width:218px}
+  .gallery-rating{width:176px}
+  .passenger-intro-card{padding:24px 26px}
+  .steps{gap:13px}
+  .step{padding:18px}
+
+  .driver-wrap{padding:50px;border-radius:34px}
+  .driver-features{gap:16px}
+  .driver-item{min-height:138px;padding:20px}
+
+  .trust-grid{gap:30px}
+  .trust-card{padding:32px}
+  .faq-grid{gap:20px}
+  .faq-card{padding:25px}
+
+  footer{padding:32px 0 36px}
+}
+
 @media(max-width:900px){
   .desktop-nav{display:none}
   .mobile-menu{display:block}
