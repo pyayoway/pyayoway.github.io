@@ -688,6 +688,37 @@ footer{border-top:1px solid var(--line);padding:30px 0 34px;color:var(--muted);f
   const APPWRITE_ENDPOINT = 'https://sgp.cloud.appwrite.io/v1';
   const APPWRITE_PROJECT_ID = '6a9dc0470000dc913bad';
   const PUBLIC_STATS_FUNCTION_ID = '6ac3ab5a001e66ca813f';
+  const STATS_CACHE_KEY = 'pyay_oway_public_stats_v1';
+  const STATS_CACHE_MS = 3600000;
+
+  function renderPublicStats(data) {
+    document.getElementById('statCompleted').textContent =
+      Number(data.completedRides || 0).toLocaleString();
+    document.getElementById('statPassengers').textContent =
+      Number(data.registeredPassengers || 0).toLocaleString();
+    document.getElementById('statDrivers').textContent =
+      Number(data.activeDrivers || 0).toLocaleString();
+    document.getElementById('statRating').textContent =
+      Number(data.ratingAverage || 0).toFixed(1);
+  }
+
+  function readStatsCache() {
+    try {
+      const cached = JSON.parse(localStorage.getItem(STATS_CACHE_KEY) || 'null');
+      return cached && cached.data && cached.data.ok ? cached : null;
+    } catch (_) {
+      return null;
+    }
+  }
+
+  function writeStatsCache(data) {
+    try {
+      localStorage.setItem(
+        STATS_CACHE_KEY,
+        JSON.stringify({ savedAt: Date.now(), data })
+      );
+    } catch (_) {}
+  }
 
   async function fetchStatsThroughAppwrite() {
     const response = await fetch(
@@ -728,33 +759,27 @@ footer{border-top:1px solid var(--line);padding:30px 0 34px;color:var(--muted);f
   }
 
   async function loadPublicStats() {
-    const status = document.getElementById('statsStatus');
+    const cached = readStatsCache();
+
+    if (cached && Date.now() - cached.savedAt < STATS_CACHE_MS) {
+      renderPublicStats(cached.data);
+      return;
+    }
 
     try {
       const data = await fetchStatsThroughAppwrite();
       if (!data.ok) throw new Error(data.error || 'Stats unavailable');
 
-      document.getElementById('statCompleted').textContent =
-        Number(data.completedRides || 0).toLocaleString();
-      document.getElementById('statPassengers').textContent =
-        Number(data.registeredPassengers || 0).toLocaleString();
-      document.getElementById('statDrivers').textContent =
-        Number(data.activeDrivers || 0).toLocaleString();
-      document.getElementById('statRating').textContent =
-        Number(data.ratingAverage || 0).toFixed(1);
-
-      if (status) {
-        status.textContent =
-          'Appwrite Live Data · ၁ နာရီတစ်ကြိမ် အလိုအလျောက် အပ်ဒိတ်';
-      }
+      renderPublicStats(data);
+      writeStatsCache(data);
     } catch (e) {
       console.error('PYAY OWAY public stats error:', e);
-      if (status) status.textContent = 'Live data ကို ခဏတာ မရနိုင်ပါ';
+      if (cached) renderPublicStats(cached.data);
     }
   }
 
   loadPublicStats();
-  setInterval(loadPublicStats, 3600000);
+  setInterval(loadPublicStats, STATS_CACHE_MS);
 
   document.querySelectorAll('.mobile-menu-panel a').forEach((link) => {
     link.addEventListener('click', () => {
