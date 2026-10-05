@@ -261,13 +261,27 @@ section[id]{scroll-margin-top:92px}
 .stat{
   min-height:120px;background:#fff;border:1px solid var(--line);
   border-radius:22px;padding:21px 22px;box-shadow:0 12px 32px rgba(0,0,0,.045);
+  display:grid;
+  grid-template-columns:44px minmax(0,1fr);
+  grid-template-rows:auto auto;
+  column-gap:14px;
+  row-gap:12px;
+  align-items:center;
 }
 .stat-icon{
   width:44px;height:44px;border-radius:14px;background:#FFF3BE;
-  display:grid;place-items:center;font-size:20px;margin-bottom:13px
+  display:grid;place-items:center;font-size:20px;margin:0;
+  grid-column:1;grid-row:1;
 }
-.stat strong{display:block;font-size:18px;color:var(--ink);margin-bottom:5px}
-.stat span{font-size:14px;color:var(--muted)}
+.stat strong{
+  display:block;font-size:18px;color:var(--ink);margin:0;
+  grid-column:2;grid-row:1;
+  white-space:nowrap;
+}
+.stat span{
+  font-size:14px;color:var(--muted);line-height:1.7;
+  grid-column:1 / -1;grid-row:2;
+}
 section{padding:78px 0}
 .section-title{max-width:720px;margin:0 auto 38px;text-align:center}
 .kicker{color:#A77E00;font-size:13px;font-weight:1000;letter-spacing:.07em;text-transform:uppercase}
