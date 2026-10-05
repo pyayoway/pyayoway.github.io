@@ -264,7 +264,8 @@ section{padding:78px 0}
 .driver-item span{font-size:13px;line-height:1.7;color:#BEBEBE}
 .trust-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:stretch}
 .trust-card{
-  border-radius:28px;background:#fff;border:1px solid var(--line);padding:34px
+  border-radius:26px;background:#fff;border:1px solid var(--line);padding:30px;
+  box-shadow:0 10px 30px rgba(0,0,0,.028)
 }
 .trust-card h3{font-size:25px;line-height:1.55;margin:0 0 10px;color:var(--ink);font-weight:700}
 .trust-card p{color:var(--muted);line-height:1.85;margin:0 0 22px}
@@ -277,22 +278,27 @@ section{padding:78px 0}
 .legal-link span{color:#A77E00;font-size:19px}
 .contact{
   background:linear-gradient(135deg,#FFC400,#FFD84D);
-  border-radius:30px;padding:38px;color:#161616;
+  border-radius:28px;padding:34px 38px;color:#161616;
   display:flex;justify-content:space-between;align-items:center;gap:30px
 }
 .contact h2{font-size:clamp(28px,4vw,42px);margin:0 0 8px}
 .contact p{margin:0;color:#5C4A00}
 .contact .btn{background:#161616;color:#fff;white-space:nowrap}
-.faq-list{max-width:900px;margin:8px auto 0;display:grid;gap:14px}
-.faq-list details{background:#fff;border:1px solid var(--line);border-radius:18px;padding:0 22px;overflow:hidden}
-.faq-list summary{cursor:pointer;list-style:none;padding:20px 4px;font-weight:700;color:var(--ink);display:flex;align-items:center;justify-content:space-between;gap:18px;font-size:15px;line-height:1.65}
-.faq-list summary::-webkit-details-marker{display:none}
-.faq-list summary:after{content:"+";font-size:22px;color:#A77E00;line-height:1}
-.faq-list details[open] summary:after{content:"−"}
-.faq-list details p{margin:0;padding:0 34px 21px 4px;color:var(--muted);font-size:14px;line-height:1.8}
-.faq-section{padding-top:72px;padding-bottom:86px}
-.faq-section .section-title{margin-bottom:30px}
-footer{border-top:1px solid var(--line);padding:34px 0 42px;color:var(--muted);font-size:13px}
+.faq-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.faq-card{
+  background:#fff;border:1px solid var(--line);border-radius:22px;
+  padding:24px;box-shadow:0 10px 30px rgba(0,0,0,.035)
+}
+.faq-no{
+  display:inline-grid;place-items:center;width:38px;height:38px;border-radius:12px;
+  background:var(--yellow);font-family:"Inter",sans-serif;font-weight:800;color:#111;
+  margin-bottom:16px
+}
+.faq-card h3{margin:0 0 9px;color:var(--ink);font-size:17px;line-height:1.55;font-weight:700}
+.faq-card p{margin:0;color:var(--muted);font-size:14px;line-height:1.8}
+.faq-section{padding-top:62px;padding-bottom:68px}
+.faq-section .section-title{margin-bottom:28px}
+footer{border-top:1px solid var(--line);padding:30px 0 38px;color:var(--muted);font-size:13px}
 .footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 .footer strong{color:var(--ink)}
 .footer a{font-weight:800;text-decoration:none;color:#333}
@@ -304,7 +310,7 @@ footer{border-top:1px solid var(--line);padding:34px 0 42px;color:var(--muted);f
   .lead{margin-left:auto;margin-right:auto}
   .actions{justify-content:center}
   .hero-visual{min-height:515px}
-  .stats-grid,.feature-grid{grid-template-columns:1fr}
+  .stats-grid,.feature-grid,.faq-grid{grid-template-columns:1fr}
   .app-layout{gap:36px}
   .passenger-gallery{min-height:475px}
   .driver-features{grid-template-columns:1fr}
@@ -440,7 +446,7 @@ footer{border-top:1px solid var(--line);padding:34px 0 42px;color:var(--muted);f
     </div>
   </section>
 
-  <section id="privacy" style="padding-top:96px;padding-bottom:76px">
+  <section id="privacy" style="padding-top:72px;padding-bottom:56px">
     <div class="container trust-grid">
       <div class="trust-card">
         <div class="kicker">Privacy & Account</div>
@@ -468,21 +474,24 @@ footer{border-top:1px solid var(--line);padding:34px 0 42px;color:var(--muted);f
       <div class="section-title">
         <div class="kicker">FAQ</div>
         <h2>မေးလေ့ရှိတဲ့ မေးခွန်းများ</h2>
-        <p>PYAY OWAY အသုံးပြုမှုနဲ့ပတ်သက်ပြီး အများဆုံးမေးလေ့ရှိတဲ့ အချက်တွေကို ရှင်းပြထားပါတယ်။</p>
+        <p>PYAY OWAY အသုံးပြုမှုနဲ့ပတ်သက်ပြီး အများဆုံးမေးလေ့ရှိတဲ့ အချက်တွေကို အတိုချုံးရှင်းပြထားပါတယ်။</p>
       </div>
-      <div class="faq-list">
-        <details>
-          <summary>PYAY OWAY ကို ဘယ်နေရာမှာ အသုံးပြုနိုင်သလဲ?</summary>
-          <p>လက်ရှိဝန်ဆောင်မှုကို ပြည်မြို့အတွက် အဓိကထား ဖန်တီးထားပါတယ်။</p>
-        </details>
-        <details>
-          <summary>Passenger က ခရီးစဉ်ကို ဘယ်လိုခေါ်မလဲ?</summary>
-          <p>Pickup နဲ့ Destination ကိုရွေးပြီး အိုးဝေခေါ်ဆိုမှုတောင်းနိုင်ပါတယ်။ Driver လက်ခံပြီးနောက် ခရီးစဉ်အခြေအနေကို App ထဲမှာ ဆက်ကြည့်နိုင်ပါတယ်။</p>
-        </details>
-        <details>
-          <summary>Driver အတွက် ဘာတွေ အသုံးပြုနိုင်သလဲ?</summary>
-          <p>Ride Request လက်ခံခြင်း၊ Pickup/Route ကြည့်ခြင်း၊ Wallet နဲ့ Trip History စီမံခြင်းတို့ကို Driver App မှာ အသုံးပြုနိုင်ပါတယ်။</p>
-        </details>
+      <div class="faq-grid">
+        <article class="faq-card">
+          <span class="faq-no">01</span>
+          <h3>ဘယ်နေရာမှာ အသုံးပြုနိုင်သလဲ?</h3>
+          <p>လက်ရှိ PYAY OWAY ဝန်ဆောင်မှုကို ပြည်မြို့အတွက် အဓိကထား ဖန်တီးထားပါတယ်။</p>
+        </article>
+        <article class="faq-card">
+          <span class="faq-no">02</span>
+          <h3>Passenger က ဘယ်လိုခေါ်မလဲ?</h3>
+          <p>Pickup နဲ့ Destination ကိုရွေးပြီး အိုးဝေခေါ်နိုင်ပါတယ်။ Driver လက်ခံပြီးနောက် ခရီးစဉ်အခြေအနေကို App ထဲမှာ ဆက်ကြည့်နိုင်ပါတယ်။</p>
+        </article>
+        <article class="faq-card">
+          <span class="faq-no">03</span>
+          <h3>Driver App မှာ ဘာတွေရှိလဲ?</h3>
+          <p>Ride Request၊ Route၊ Wallet နဲ့ Trip History စီမံမှုတွေကို Driver App မှာ အသုံးပြုနိုင်ပါတယ်။</p>
+        </article>
       </div>
     </div>
   </section>
