@@ -13,7 +13,7 @@ const CORS = {
   'Access-Control-Max-Age': '86400',
   'Cross-Origin-Resource-Policy': 'cross-origin',
   'Vary': 'Origin',
-  'Cache-Control': 'public, max-age=300'
+  'Cache-Control': 'public, max-age=3600'
 };
 
 function makeClient(req) {
@@ -28,7 +28,7 @@ async function countRows(tablesDB, tableId, queries = []) {
     databaseId: DATABASE_ID,
     tableId,
     queries: [...queries, Query.limit(1)],
-    ttl: 300
+    ttl: 3600
   });
 
   return Number(result.total || 0);
@@ -54,7 +54,7 @@ async function getAverageRating(tablesDB) {
       tableId: RATINGS_TABLE_ID,
       queries,
       total: false,
-      ttl: 300
+      ttl: 3600
     });
 
     for (const row of page.rows) {
