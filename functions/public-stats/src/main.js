@@ -7,9 +7,12 @@ const RIDE_REQUESTS_TABLE_ID = '6a9dc452001e93e8d238';
 const RATINGS_TABLE_ID = '6aa9dccd0031be68ce31';
 
 const CORS = {
-  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Origin': 'https://pyayoway.github.io',
   'Access-Control-Allow-Methods': 'GET, OPTIONS',
-  'Access-Control-Allow-Headers': 'Content-Type',
+  'Access-Control-Allow-Headers': 'Content-Type, Accept',
+  'Access-Control-Max-Age': '86400',
+  'Cross-Origin-Resource-Policy': 'cross-origin',
+  'Vary': 'Origin',
   'Cache-Control': 'public, max-age=300'
 };
 
