@@ -125,6 +125,13 @@ nav a{text-decoration:none;font-size:14px;font-weight:800;color:#343434}
 .btn:hover{transform:translateY(-2px)}
 .btn-dark{background:var(--ink);color:#fff}
 .btn-yellow{background:var(--yellow);color:var(--ink)}
+.store-soon{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:52px;padding:0 18px;border-radius:14px;
+  background:#fff;border:1px solid var(--line);
+  color:#777;font-family:"Inter","Noto Sans Myanmar",sans-serif;
+  font-size:13px;font-weight:700;cursor:default
+}
 .hero-visual{position:relative;min-height:570px;display:grid;place-items:center}
 .hero-orb{
   position:absolute;width:460px;height:460px;border-radius:50%;
@@ -375,27 +382,29 @@ footer{border-top:1px solid var(--line);padding:30px 0 34px;color:var(--muted);f
   .hero-copy{text-align:center}
   .lead{margin-left:auto;margin-right:auto}
   .actions{justify-content:center}
+  .store-soon{width:100%;max-width:320px}
   .hero-visual{min-height:515px}
   .stats-grid,.feature-grid,.faq-grid{grid-template-columns:1fr}
-  .public-stats-grid{grid-template-columns:repeat(2,1fr)}  .app-layout{gap:26px}
+  .public-stats-grid{grid-template-columns:repeat(2,1fr)}
+  .app-layout{gap:26px}
   .passenger-intro-card{padding:20px}
   .passenger-intro-card h2{font-size:26px}
   .passenger-gallery{min-height:430px}
   .driver-features{grid-template-columns:repeat(2,1fr)}
-  .contact{text-align:center;justify-content:center;flex-direction:column}
 }
 @media(max-width:560px){
   .container{width:min(100% - 28px,1180px)}
   .public-stats-grid{grid-template-columns:1fr 1fr;gap:12px}
   .public-stat-card{padding:24px 14px;border-radius:20px}
   .public-stat-value{font-size:38px;min-height:42px}
-  .public-stat-label{font-size:12px}
+  .public-stat-label{font-size:12px;line-height:1.45}
+  .public-stats{padding:54px 0 58px}
   .nav{height:68px}
   .brand-mark{width:40px;height:40px}
   .nav-cta{padding:9px 12px;font-size:13px}
   .hero-mm{font-size:29px;line-height:1.58}
   .hero-en{font-size:38px;line-height:1.18;letter-spacing:-.5px}
-  .hero-visual{min-height:460px}
+  .hero-visual{min-height:430px}
   .hero-orb{width:330px;height:330px}
   .phone{width:245px}
   .floating{font-size:11px;padding:10px 12px}
@@ -444,6 +453,7 @@ footer{border-top:1px solid var(--line);padding:30px 0 34px;color:var(--muted);f
         <div class="actions">
           <a class="btn btn-dark" href="#passenger">Passenger App</a>
           <a class="btn btn-yellow" href="#driver">Driver App</a>
+          <span class="store-soon" aria-label="Google Play coming soon">▶ Google Play · မကြာမီ</span>
         </div>
       </div>
       <div class="hero-visual">
@@ -476,7 +486,7 @@ footer{border-top:1px solid var(--line);padding:30px 0 34px;color:var(--muted);f
         </div>
         <div class="public-stat-card">
           <span class="public-stat-value" id="statPassengers">—</span>
-          <span class="public-stat-label">Online Passenger</span>
+          <span class="public-stat-label">Registered Passengers</span>
         </div>
         <div class="public-stat-card">
           <span class="public-stat-value" id="statDrivers">—</span>
@@ -649,7 +659,7 @@ footer{border-top:1px solid var(--line);padding:30px 0 34px;color:var(--muted);f
       document.getElementById('statCompleted').textContent =
         Number(data.completedRides || 0).toLocaleString();
       document.getElementById('statPassengers').textContent =
-        Number(data.activePassengers || 0).toLocaleString();
+        Number(data.registeredPassengers || 0).toLocaleString();
       document.getElementById('statDrivers').textContent =
         Number(data.activeDrivers || 0).toLocaleString();
       document.getElementById('statRating').textContent =
