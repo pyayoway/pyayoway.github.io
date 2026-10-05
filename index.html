@@ -597,26 +597,53 @@ footer{border-top:1px solid var(--line);padding:30px 0 34px;color:var(--muted);f
 </footer>
 
 <script>
-  const PYAY_OWAY_STATS_URL = 'https://starter-function-ot1f.sgp.appwrite.run';
+  const APPWRITE_ENDPOINT = 'https://sgp.cloud.appwrite.io/v1';
+  const APPWRITE_PROJECT_ID = '6a9dc0470000dc913bad';
+  const PUBLIC_STATS_FUNCTION_ID = '6ac3ab5a001e66ca813f';
+
+  async function fetchStatsThroughAppwrite() {
+    const response = await fetch(
+      APPWRITE_ENDPOINT + '/functions/' + PUBLIC_STATS_FUNCTION_ID + '/executions',
+      {
+        method: 'POST',
+        mode: 'cors',
+        cache: 'no-store',
+        headers: {
+          'Content-Type': 'application/json',
+          'X-Appwrite-Project': APPWRITE_PROJECT_ID
+        },
+        body: JSON.stringify({
+          body: '',
+          async: false,
+          path: '/',
+          method: 'GET',
+          headers: {}
+        })
+      }
+    );
+
+    if (!response.ok) {
+      throw new Error('Appwrite execution HTTP ' + response.status);
+    }
+
+    const execution = await response.json();
+
+    if (execution.responseStatusCode && execution.responseStatusCode >= 400) {
+      throw new Error('Function HTTP ' + execution.responseStatusCode);
+    }
+
+    if (!execution.responseBody) {
+      throw new Error('Empty function response');
+    }
+
+    return JSON.parse(execution.responseBody);
+  }
 
   async function loadPublicStats() {
-    if (!PYAY_OWAY_STATS_URL) return;
-
     const status = document.getElementById('statsStatus');
 
     try {
-      const response = await fetch(
-        PYAY_OWAY_STATS_URL + '?t=' + Date.now(),
-        {
-          method: 'GET',
-          mode: 'cors',
-          cache: 'no-store'
-        }
-      );
-
-      if (!response.ok) throw new Error('HTTP ' + response.status);
-
-      const data = await response.json();
+      const data = await fetchStatsThroughAppwrite();
       if (!data.ok) throw new Error(data.error || 'Stats unavailable');
 
       document.getElementById('statCompleted').textContent =
@@ -628,7 +655,10 @@ footer{border-top:1px solid var(--line);padding:30px 0 34px;color:var(--muted);f
       document.getElementById('statRating').textContent =
         Number(data.ratingAverage || 0).toFixed(1);
 
-      if (status) status.textContent = 'Appwrite Live Data · ၅ မိနစ်တစ်ကြိမ် အလိုအလျောက် အပ်ဒိတ်';
+      if (status) {
+        status.textContent =
+          'Appwrite Live Data · ၅ မိနစ်တစ်ကြိမ် အလိုအလျောက် အပ်ဒိတ်';
+      }
     } catch (e) {
       console.error('PYAY OWAY public stats error:', e);
       if (status) status.textContent = 'Live data ကို ခဏတာ မရနိုင်ပါ';
