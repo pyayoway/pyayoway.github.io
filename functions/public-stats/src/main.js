@@ -10,7 +10,7 @@ const CORS = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Methods': 'GET, OPTIONS',
   'Access-Control-Allow-Headers': 'Content-Type',
-  'Cache-Control': 'public, max-age=120'
+  'Cache-Control': 'public, max-age=300'
 };
 
 function makeClient(req) {
@@ -25,7 +25,7 @@ async function countRows(tablesDB, tableId, queries = []) {
     databaseId: DATABASE_ID,
     tableId,
     queries: [...queries, Query.limit(1)],
-    ttl: 120
+    ttl: 300
   });
 
   return Number(result.total || 0);
