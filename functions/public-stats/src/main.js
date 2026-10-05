@@ -96,7 +96,7 @@ export default async ({ req, res, log, error }) => {
 
     const [
       completedRides,
-      activePassengers,
+      registeredPassengers,
       activeDrivers,
       ratingSummary
     ] = await Promise.all([
@@ -107,8 +107,7 @@ export default async ({ req, res, log, error }) => {
       ),
       countRows(
         tablesDB,
-        PASSENGERS_TABLE_ID,
-        [Query.equal('online', [true])]
+        PASSENGERS_TABLE_ID
       ),
       countRows(
         tablesDB,
@@ -122,7 +121,7 @@ export default async ({ req, res, log, error }) => {
       {
         ok: true,
         completedRides,
-        activePassengers,
+        registeredPassengers,
         activeDrivers,
         ratingAverage: ratingSummary.ratingAverage,
         ratingCount: ratingSummary.ratingCount,
