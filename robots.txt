@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /functions/
+Disallow: /preview-v2.html
+
+Sitemap: https://pyayoway.github.io/sitemap.xml
