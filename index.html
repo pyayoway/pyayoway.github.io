@@ -487,7 +487,7 @@ footer{border-top:1px solid var(--line);padding:30px 0 34px;color:var(--muted);f
           <span class="public-stat-label">Customer Rating</span>
         </div>
       </div>
-      <div class="public-stats-note" id="statsStatus">Appwrite Live Data · ၅ မိနစ်တစ်ကြိမ် အလိုအလျောက် အပ်ဒိတ်</div>
+      <div class="public-stats-note" id="statsStatus">Appwrite Live Data · ၁ နာရီတစ်ကြိမ် အလိုအလျောက် အပ်ဒိတ်</div>
     </div>
   </section>
 
@@ -657,7 +657,7 @@ footer{border-top:1px solid var(--line);padding:30px 0 34px;color:var(--muted);f
 
       if (status) {
         status.textContent =
-          'Appwrite Live Data · ၅ မိနစ်တစ်ကြိမ် အလိုအလျောက် အပ်ဒိတ်';
+          'Appwrite Live Data · ၁ နာရီတစ်ကြိမ် အလိုအလျောက် အပ်ဒိတ်';
       }
     } catch (e) {
       console.error('PYAY OWAY public stats error:', e);
@@ -666,7 +666,7 @@ footer{border-top:1px solid var(--line);padding:30px 0 34px;color:var(--muted);f
   }
 
   loadPublicStats();
-  setInterval(loadPublicStats, 300000);
+  setInterval(loadPublicStats, 3600000);
 </script>
 
 </body>
