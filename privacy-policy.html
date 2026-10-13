@@ -53,7 +53,7 @@
   <h1>Pyay Oway Passenger Privacy Policy</h1>
 
   <p class="updated">
-    Last updated: October 1, 2026
+    Last updated: October 13, 2026
   </p>
 
   <section>
@@ -87,7 +87,9 @@
       <li>Ride request and trip information</li>
       <li>Saved places you create</li>
       <li>Ratings and comments you submit</li>
+      <li>In-app chat messages you send to or receive from drivers during a trip</li>
       <li>Notifications related to your account and trips</li>
+      <li>Push notification registration tokens and related app or device identifiers used for message delivery</li>
       <li>Information necessary to process and maintain your account</li>
     </ul>
   </section>
@@ -105,6 +107,10 @@
     <p>
       Location access is used only when required for the relevant App
       functionality and according to the permissions granted on your device.
+      During an active ride request or trip, the App may use a visible Android
+      foreground service notification to support location-dependent trip features
+      if the App is minimized. The App does not request Android's always-on
+      background location permission.
     </p>
   </section>
 
@@ -122,6 +128,8 @@
       <li>Send trip and account notifications</li>
       <li>Maintain saved places</li>
       <li>Process ratings and feedback</li>
+      <li>Deliver trip-related messages exchanged between passengers and drivers</li>
+      <li>Register devices for and deliver trip or account notifications</li>
       <li>Maintain trip records</li>
       <li>Provide customer support</li>
       <li>Maintain the security and operation of the App</li>
@@ -139,6 +147,18 @@
     <p>
       The App also uses Google Maps services to provide map, location, and
       route-related functionality.
+    </p>
+
+    <p>
+      The App uses Firebase Cloud Messaging (FCM), a Google service, to deliver
+      notifications about trip and account events. Push registration tokens and
+      associated app or device identifiers may be processed for notification
+      delivery and service operation.
+    </p>
+
+    <p>
+      The App does not currently display in-app advertisements and does not
+      use Google AdMob.
     </p>
 
     <p>
@@ -169,13 +189,16 @@
       Information may be shared within the Pyay Oway service when necessary
       to provide transportation services. For example, information required
       to process a ride request may be made available to the driver handling
-      that request.
+      that request. Trip pickup and destination details, trip status, and
+      messages sent through the in-app trip chat may be visible to the driver
+      assigned to the trip as part of providing the requested service.
     </p>
 
     <p>
       Information may also be processed by technical service providers used
-      to operate the App, including Appwrite and Google Maps services, as
-      necessary for the functionality described in this Privacy Policy.
+      to operate the App, including Appwrite, Google Maps, and Firebase Cloud
+      Messaging services, as necessary for the functionality described in this
+      Privacy Policy.
     </p>
   </section>
 
