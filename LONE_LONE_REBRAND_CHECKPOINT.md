@@ -21,7 +21,7 @@ Updated: 2026-10-15
 
 ## Deliberately retained (DO NOT bulk-replace)
 - `https://pyayoway.github.io` and pathnames: currently used in the existing applications and Google Play preparations. Keep functioning until a domain migration with redirects.
-- `pyayoway@gmail.com`: existing verified support mailbox.
+- `loneloneoway@gmail.com`: user-requested support email for Lone Lone (mailbox access/delivery must be verified separately).
 - Appwrite project IDs, database IDs, function IDs, secrets, API URLs, route names.
 - Existing Android package IDs, signing keys and published/production app identifiers.
 - Legal/company name **PYAY OWAY COMPANY LIMITED** unless corporate change is separately completed.
@@ -39,3 +39,7 @@ Updated: 2026-10-15
 
 ## Reversal
 GitHub history retains each 2026-10-15 commit; revert the relevant branding commits if needed. No backend, Appwrite or production mobile app changes were made during this website rebrand.
+
+## Support email change (2026-10-15)
+- Website, legal pages, and preview pages now use `loneloneoway@gmail.com` for visible contact text and mailto links.
+- Old address changed only in this GitHub Pages repository. App source, Appwrite Functions, Google Play Console and external services need independent review.
