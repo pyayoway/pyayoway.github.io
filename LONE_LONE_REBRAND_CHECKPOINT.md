@@ -7,17 +7,18 @@ Updated: 2026-10-15
 - Campaign phrase: **တစ်ချက်ပဲ နှိပ်ပါ**
 - Main operating area: Pyay, Myanmar
 - Primary visual palette: yellow, black, red
-- Official character reference: the user-approved yellow three-wheeler mascot with yellow cap, red scarf, black gloves and expressive friendly face. The website header icon/favicon and social preview now embed a compressed copy of the **user-approved 3D sticker image provided on 15 October 2026**. The SVG campaign posters remain stylized derivatives and do not exactly reproduce that image.
+- Official character reference: the user-approved yellow three-wheeler mascot with yellow cap, red scarf, black gloves and expressive friendly face. The website header icon/favicon and social preview now embed a compressed copy of the **user-approved 3D sticker image provided on 15 October 2026**. The website campaign gallery now shows four user-approved poster artworks provided on 15 October 2026, wrapped in SVG containers that embed optimized WebP images.
 
 ## GitHub Pages files already updated
 - `index.html`: visible names, SEO/social metadata, mascot-inspired favicon/navbar, new poster gallery; Appwrite live stats code untouched.
 - `social-preview.svg`: Lone Lone brand for share preview.
 - `assets/lonelone-mascot.svg`: embedded copy of the user-approved Lone Lone mascot sticker image (responsive site header and favicon).
-- `marketing/lonelone-poster-01.svg`: “လုံးလုံး — တစ်ချက်ပဲ နှိပ်ပါ”.
-- `marketing/lonelone-poster-02.svg`: “လုံးလုံး — ခရီးသွားဖို့ လွယ်ကူစေမယ်”.
-- `marketing/lonelone-poster-03.svg`: “လုံးလုံး — ပြည်မြို့နဲ့အတူ”.
+- `marketing/lonelone-poster-01.svg`: approved poster 1, embedded web-optimized raster image.
+- `marketing/lonelone-poster-02.svg`: approved poster 2, embedded web-optimized raster image.
+- `marketing/lonelone-poster-03.svg`: approved poster 3, embedded web-optimized raster image.
 - Passenger & Driver privacy/deletion legal HTML pages: updated name, with former-name notice for existing users.
-- `sitemap.xml`: added the relevant website/legal/poster URLs.
+- `marketing/lonelone-poster-04.svg`: approved poster 4, embedded web-optimized raster image.
+- `sitemap.xml`: added the relevant website/legal/four poster URLs.
 
 ## Deliberately retained (DO NOT bulk-replace)
 - `https://pyayoway.github.io` and pathnames: currently used in the existing applications and Google Play preparations. Keep functioning until a domain migration with redirects.
@@ -43,3 +44,9 @@ GitHub history retains each 2026-10-15 commit; revert the relevant branding comm
 ## Support email change (2026-10-15)
 - Website, legal pages, and preview pages now use `loneloneoway@gmail.com` for visible contact text and mailto links.
 - Old address changed only in this GitHub Pages repository. App source, Appwrite Functions, Google Play Console and external services need independent review.
+
+## Four approved promotional posters (2026-10-15)
+- Replaced poster 01–03 and added poster 04 using the four images uploaded by the user in that order.
+- Preserved original artwork (web-compressed to WebP, embedded in SVG so GitHub Pages serves it as SVG image content).
+- Updated `index.html#posters` to display all four and refreshed sitemap; Appwrite integration and privacy links are untouched.
+- Live GitHub Pages HTTP rendering may require additional verification; authenticated GitHub content reads confirm all poster assets and references.
