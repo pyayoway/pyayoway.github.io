@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1080" height="1350" viewBox="0 0 1080 1350" role="img" aria-label="လုံးလုံး ကြော်ငြာပိုစတာ"><defs><linearGradient id="yellow" x2=".9" y2="1"><stop stop-color="#FFDE33"/><stop offset="1" stop-color="#F4BB00"/></linearGradient><linearGradient id="dark" x2="1" y2="1"><stop stop-color="#292929"/><stop offset="1" stop-color="#070707"/></linearGradient><linearGradient id="red" x2="1" y2="1"><stop stop-color="#FF343B"/><stop offset="1" stop-color="#BD0813"/></linearGradient><filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="20" stdDeviation="25" flood-opacity=".16"/></filter></defs>
+<rect width="1080" height="1350" fill="url(#dark)"/>
+<circle cx="1030" cy="210" r="380" fill="#FFCB00" opacity=".11"/>
+<circle cx="-70" cy="1090" r="390" fill="#FFCB00" opacity=".08"/>
+<text x="74" y="132" fill="#FFD000" font-size="94" font-weight="900" font-family="'Noto Sans Myanmar','Myanmar Text',sans-serif">လုံးလုံး</text>
+<text x="80" y="252" fill="#fff" font-size="65" font-weight="800" font-family="'Noto Sans Myanmar','Myanmar Text',sans-serif">ခရီးသွားဖို့</text>
+<text x="80" y="335" fill="#FFCF00" font-size="65" font-weight="800" font-family="'Noto Sans Myanmar','Myanmar Text',sans-serif">လွယ်ကူစေမယ်</text>
+<rect x="82" y="391" width="300" height="10" rx="5" fill="#F02835"/>
+<g transform="translate(640 434) rotate(8 170 350)" filter="url(#shadow)"><g transform="translate(0 0)">
+<rect width="372" height="720" rx="55" fill="#111" stroke="#444" stroke-width="5"/>
+<rect x="15" y="17" width="342" height="685" rx="43" fill="#FFFDF4"/>
+<rect x="127" y="26" width="120" height="26" rx="13" fill="#151515"/>
+<text x="36" y="94" font-size="30" font-weight="900" fill="#161616" font-family="'Noto Sans Myanmar','Myanmar Text',sans-serif">လုံးလုံး</text>
+<rect x="26" y="117" width="320" height="415" rx="20" fill="#F4F1E7"/>
+<path d="M32 180L328 455M60 510L325 190M45 294L332 322M182 130L165 516" fill="none" stroke="#fff" stroke-width="20"/>
+<path d="M85 434L159 363L166 260L270 208" fill="none" stroke="#FFD000" stroke-linecap="round" stroke-width="14"/>
+<circle cx="85" cy="435" r="22" fill="#111" stroke="#fff" stroke-width="6"/>
+<path d="M270 161q-26 0-26 26 0 20 26 48 26-28 26-48 0-26-26-26" fill="#E21C27"/><circle cx="270" cy="187" r="9" fill="#fff"/>
+<rect x="24" y="545" width="324" height="55" rx="19" fill="#fff" stroke="#EFEDE5"/>
+<text x="45" y="579" font-size="20" fill="#171717" font-family="'Noto Sans Myanmar','Myanmar Text',sans-serif">ထွက်ခွာမည့်နေရာ</text>
+<rect x="24" y="612" width="324" height="65" rx="21" fill="#FFCD00"/>
+<text x="186" y="654" text-anchor="middle" font-size="22" font-weight="900" fill="#111" font-family="'Noto Sans Myanmar','Myanmar Text',sans-serif">တစ်ချက်ပဲ နှိပ်ပါ</text>
+</g></g>
+<g transform="translate(-40 570) scale(1.05)" filter="url(#shadow)"><g id="lone-mascot" stroke-linejoin="round">
+<!-- simplified illustration of the approved Lone Lone yellow tuk-tuk mascot -->
+<ellipse cx="355" cy="620" rx="267" ry="31" fill="#000" opacity=".15"/>
+<g stroke="#121212" stroke-width="12">
+<ellipse cx="195" cy="542" rx="76" ry="98" fill="#141414"/>
+<ellipse cx="526" cy="538" rx="70" ry="100" fill="#141414"/>
+<ellipse cx="365" cy="570" rx="83" ry="113" fill="#181818"/>
+<path d="M175 210Q182 102 370 105Q515 111 550 255L595 487Q570 565 484 545L222 534Q138 520 155 424Z" fill="#FFD000"/>
+<path d="M205 220Q231 155 374 159Q506 158 526 263L536 360Q528 410 479 410L215 394Q184 394 182 355Z" fill="#1C1C1D"/>
+<path d="M250 133Q273 63 378 58Q486 67 493 149Q470 177 402 181L237 174Z" fill="#FFD000"/>
+<path d="M251 130Q315 104 450 126" fill="none" stroke="#171717" stroke-width="19"/>
+<path d="M290 184Q408 130 533 167Q553 178 541 196Q531 214 495 204Q361 169 288 200Z" fill="#FFD000"/>
+<path d="M202 385Q373 412 523 393L546 443Q382 480 188 433Z" fill="#181818"/>
+<rect x="196" y="400" width="92" height="56" rx="17" fill="#F6F6F6"/>
+<rect x="455" y="410" width="74" height="51" rx="15" fill="#F6F6F6"/>
+<path d="M185 486Q370 441 535 492L535 538L187 527Z" fill="#FFD000"/>
+<path d="M145 333Q91 286 65 315Q45 340 76 375L140 415" fill="#FFD000"/>
+<path d="M61 315Q28 290 17 311Q0 334 40 345Q12 353 28 367Q41 382 60 365Q44 394 61 396Q88 397 98 365" fill="#171717"/>
+<path d="M548 350Q620 331 639 404L606 469Q583 493 562 456L590 413" fill="#FFD000"/>
+<path d="M197 375Q370 420 552 382" fill="none" stroke="#FF202B" stroke-width="35"/>
+<path d="M195 389Q142 422 65 450Q75 388 154 365" fill="#FA202A"/>
+</g>
+<g>
+<ellipse cx="304" cy="288" rx="48" ry="65" fill="white" transform="rotate(-8 304 288)"/>
+<ellipse cx="438" cy="295" rx="45" ry="61" fill="white" transform="rotate(6 438 295)"/>
+<ellipse cx="314" cy="304" rx="26" ry="39" fill="#3B210F"/>
+<ellipse cx="430" cy="307" rx="26" ry="39" fill="#3B210F"/>
+<ellipse cx="316" cy="312" rx="18" ry="27" fill="#0A0A0A"/>
+<ellipse cx="434" cy="315" rx="18" ry="27" fill="#0A0A0A"/>
+<circle cx="302" cy="280" r="12" fill="#fff"/><circle cx="418" cy="284" r="12" fill="#fff"/>
+<path d="M348 344Q382 388 421 348Q391 413 348 344" fill="#ED1928" stroke="#111" stroke-width="5"/>
+<path d="M352 346Q384 365 417 346" fill="none" stroke="#fff" stroke-width="9"/>
+<path d="M261 211Q299 185 330 209M402 213Q441 186 466 222" fill="none" stroke="#151515" stroke-width="16" stroke-linecap="round"/>
+</g></g></g>
+<rect x="68" y="1207" rx="22" width="928" height="84" fill="#FFD000"/>
+<text x="532" y="1261" text-anchor="middle" fill="#111" font-size="30" font-weight="800" font-family="'Noto Sans Myanmar','Myanmar Text',sans-serif">Passenger App  •  Driver App</text>
+</svg>
